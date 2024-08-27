@@ -25,7 +25,7 @@ public class Game implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String name;
+	private String title;
 	private Platform platform;
 
 	@ManyToOne
@@ -38,10 +38,10 @@ public class Game implements Serializable {
 	public Game() {
 	}
 
-	public Game(long id, String name, Platform platform, Genre genre) {
+	public Game(long id, String title, Platform platform, Genre genre) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.title = title;
 		this.platform = platform;
 		this.genre = genre;
 	}
@@ -54,12 +54,12 @@ public class Game implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTittle(String title) {
+		this.title = title;
 	}
 
 	public Platform getPlatform() {
